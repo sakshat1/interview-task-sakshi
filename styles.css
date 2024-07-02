@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('./src/assets/images/background-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    background-color: #011339;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.intel-evo {
+    max-width: 70%;
+    align-items: center;
+    padding-left: 50px;
+    margin-right: 50px;
+    height: auto;
+}
+
+.background-section {
+    position: relative;
+    text-align: center;
+}
+
+.background-image {
+    background-image: url('./src/assets/images/background-image.jpg');
+    background-position: center;
+    height: 100vh;
+    filter: blur(0);
+    transition: filter 0.3s ease, brightness 0.3s ease;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+}
+
+.image1, .image2, .image3 {
+    padding: 20px;
+}
+
+.clickable-images {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clickable-images > div {
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.popup, .popup2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    max-height: 100vh;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    opacity: 0.9;
+}
+
+.image-section {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img, .image-section video {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.clickable-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#backgroundGif {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#clickedImage {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 600px) {
+    .image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (min-width: 900px) {
+    .image {
+        width: 200px;
+        height: 200px;
+    }
+}
